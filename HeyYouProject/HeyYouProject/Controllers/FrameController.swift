@@ -10,13 +10,21 @@ import UIKit
 import LBTAComponents
 
 class FrameController: UIViewController {
-
+    
     private let cellID_ForYou = "CELLID"
     private let cellID_YourGreatHeyMesses = "cellid"
+    
+    var horizontalBarRightAnchorConstant: NSLayoutConstraint?
     
     let customNavigationBarView: customNavigationBar = {
         let view = customNavigationBar()
         view.isUserInteractionEnabled = true
+        return view
+    }()
+    
+    let horizontalBar: UIView = {
+        let view = UIView()
+        view.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         return view
     }()
     
@@ -56,9 +64,16 @@ class FrameController: UIViewController {
         view.addSubview(frameCollectionView)
         frameCollectionView.anchor(view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: marginValue, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
+        let height_customNavigationBarView = marginValue
         view.addSubview(customNavigationBarView)
-        customNavigationBarView.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: marginValue)
-       
+        customNavigationBarView.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: height_customNavigationBarView)
+        
+        let horizontalBarRightAnchorConstantValue = view.frame.size.width - (view.frame.size.width * 1/3.5)
+        customNavigationBarView.addSubview(horizontalBar)
+        horizontalBar.anchor(nil, left: customNavigationBarView.leftAnchor, bottom: customNavigationBarView.bottomAnchor, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 7)
+        horizontalBarRightAnchorConstant = horizontalBar.rightAnchor.constraint(equalTo: customNavigationBarView.rightAnchor)
+        horizontalBarRightAnchorConstant?.isActive = true
+        horizontalBarRightAnchorConstant?.constant = -horizontalBarRightAnchorConstantValue
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -102,7 +117,38 @@ extension FrameController: UICollectionViewDelegate, UICollectionViewDelegateFlo
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsetsMake(0, 0, 0, 0)
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let horizontalBarRightAnchorConstantValue = view.frame.size.width - (view.frame.size.width * 1/3.5)
+        let increaseValue = scrollView.contentOffset.x
+        horizontalBarRightAnchorConstant?.constant = -horizontalBarRightAnchorConstantValue + increaseValue
+        
+        if scrollView.contentOffset.x == 0 {
+            UIView.animate(withDuration: 0.5, animations: {
+                self.horizontalBar.alpha = 1
+            })
+            
+        } else if scrollView.contentOffset.x == self.view.frame.size.width {
+            UIView.animate(withDuration: 0.5, animations: {
+                self.horizontalBar.alpha = 1
+            })
+            
+        }
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+   
+    
 }
+
+
 
 
 

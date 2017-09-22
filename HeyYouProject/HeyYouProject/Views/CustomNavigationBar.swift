@@ -68,7 +68,7 @@ class customNavigationBar: UIView, UICollectionViewDelegateFlowLayout, UICollect
     
     // MARK: - Delegate
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width_cell1 = frame.size.width * 1/3
+        let width_cell1 = frame.size.width * 1/3.5
         let width_cell2 = frame.size.width - width_cell1
         let height_cell = frame.size.height
         if indexPath.item == 0 {
@@ -99,6 +99,7 @@ class NavigationBarCollectionViewCell: UICollectionViewCell {
         label.sizeToFit()
         label.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.heavy)
         return label
     }()
     
