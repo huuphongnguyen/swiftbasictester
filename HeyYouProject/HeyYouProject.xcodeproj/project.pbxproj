@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		024F03C779EA5F2146A3B08F /* Pods_HeyYouProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08777A1E32D1BB1BF1E18DB0 /* Pods_HeyYouProject.framework */; };
+		86496B1D1F754971000CA673 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86496B1C1F754971000CA673 /* CustomNavigationBar.swift */; };
+		86496B1F1F754981000CA673 /* ForYouCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86496B1E1F754981000CA673 /* ForYouCell.swift */; };
+		86496B211F754998000CA673 /* YourGreateHeyMessesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86496B201F754998000CA673 /* YourGreateHeyMessesCell.swift */; };
 		86BFCA901F75279300C9F50C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BFCA8F1F75279300C9F50C /* AppDelegate.swift */; };
 		86BFCA921F75279300C9F50C /* FrameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BFCA911F75279300C9F50C /* FrameController.swift */; };
 		86BFCA951F75279300C9F50C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86BFCA931F75279300C9F50C /* Main.storyboard */; };
@@ -16,6 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08777A1E32D1BB1BF1E18DB0 /* Pods_HeyYouProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeyYouProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A7B5673AD68D6E12B7F039A /* Pods-HeyYouProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyYouProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HeyYouProject/Pods-HeyYouProject.debug.xcconfig"; sourceTree = "<group>"; };
+		86496B1C1F754971000CA673 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
+		86496B1E1F754981000CA673 /* ForYouCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouCell.swift; sourceTree = "<group>"; };
+		86496B201F754998000CA673 /* YourGreateHeyMessesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourGreateHeyMessesCell.swift; sourceTree = "<group>"; };
 		86BFCA8C1F75279300C9F50C /* HeyYouProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeyYouProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86BFCA8F1F75279300C9F50C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86BFCA911F75279300C9F50C /* FrameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameController.swift; sourceTree = "<group>"; };
@@ -24,6 +33,7 @@
 		86BFCA991F75279300C9F50C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86BFCA9C1F75279300C9F50C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86BFCA9E1F75279300C9F50C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDBB5E0C33352AEBA5FEA01B /* Pods-HeyYouProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyYouProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-HeyYouProject/Pods-HeyYouProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,60 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				024F03C779EA5F2146A3B08F /* Pods_HeyYouProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		690F1E744DB8B8C3314C83BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A7B5673AD68D6E12B7F039A /* Pods-HeyYouProject.debug.xcconfig */,
+				DDBB5E0C33352AEBA5FEA01B /* Pods-HeyYouProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		86496B191F75493E000CA673 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				86BFCA8F1F75279300C9F50C /* AppDelegate.swift */,
+				86BFCA931F75279300C9F50C /* Main.storyboard */,
+				86BFCA991F75279300C9F50C /* Assets.xcassets */,
+				86BFCA9B1F75279300C9F50C /* LaunchScreen.storyboard */,
+				86BFCA9E1F75279300C9F50C /* Info.plist */,
+				86BFCA961F75279300C9F50C /* HeyYouProject.xcdatamodeld */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		86496B1A1F75494C000CA673 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				86BFCA911F75279300C9F50C /* FrameController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		86496B1B1F75495A000CA673 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				86496B1C1F754971000CA673 /* CustomNavigationBar.swift */,
+				86496B1E1F754981000CA673 /* ForYouCell.swift */,
+				86496B201F754998000CA673 /* YourGreateHeyMessesCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		86BFCA831F75279300C9F50C = {
 			isa = PBXGroup;
 			children = (
 				86BFCA8E1F75279300C9F50C /* HeyYouProject */,
 				86BFCA8D1F75279300C9F50C /* Products */,
+				690F1E744DB8B8C3314C83BE /* Pods */,
+				FFD4E7CA21F8EA158202F1A4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +109,19 @@
 		86BFCA8E1F75279300C9F50C /* HeyYouProject */ = {
 			isa = PBXGroup;
 			children = (
-				86BFCA8F1F75279300C9F50C /* AppDelegate.swift */,
-				86BFCA911F75279300C9F50C /* FrameController.swift */,
-				86BFCA931F75279300C9F50C /* Main.storyboard */,
-				86BFCA991F75279300C9F50C /* Assets.xcassets */,
-				86BFCA9B1F75279300C9F50C /* LaunchScreen.storyboard */,
-				86BFCA9E1F75279300C9F50C /* Info.plist */,
-				86BFCA961F75279300C9F50C /* HeyYouProject.xcdatamodeld */,
+				86496B1B1F75495A000CA673 /* Views */,
+				86496B1A1F75494C000CA673 /* Controllers */,
+				86496B191F75493E000CA673 /* Supporting Files */,
 			);
 			path = HeyYouProject;
+			sourceTree = "<group>";
+		};
+		FFD4E7CA21F8EA158202F1A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				08777A1E32D1BB1BF1E18DB0 /* Pods_HeyYouProject.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +131,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86BFCAA11F75279300C9F50C /* Build configuration list for PBXNativeTarget "HeyYouProject" */;
 			buildPhases = (
+				AED1295F80E6C4109D9143B4 /* [CP] Check Pods Manifest.lock */,
 				86BFCA881F75279300C9F50C /* Sources */,
 				86BFCA891F75279300C9F50C /* Frameworks */,
 				86BFCA8A1F75279300C9F50C /* Resources */,
+				7ACF5B129F31DF156F47683B /* [CP] Embed Pods Frameworks */,
+				16C19C286CDA27AD71F4784C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,14 +194,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		16C19C286CDA27AD71F4784C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HeyYouProject/Pods-HeyYouProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7ACF5B129F31DF156F47683B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HeyYouProject/Pods-HeyYouProject-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/LBTAComponents/LBTAComponents.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LBTAComponents.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HeyYouProject/Pods-HeyYouProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AED1295F80E6C4109D9143B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HeyYouProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		86BFCA881F75279300C9F50C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86496B1D1F754971000CA673 /* CustomNavigationBar.swift in Sources */,
 				86BFCA921F75279300C9F50C /* FrameController.swift in Sources */,
 				86BFCA901F75279300C9F50C /* AppDelegate.swift in Sources */,
 				86BFCA981F75279300C9F50C /* HeyYouProject.xcdatamodeld in Sources */,
+				86496B1F1F754981000CA673 /* ForYouCell.swift in Sources */,
+				86496B211F754998000CA673 /* YourGreateHeyMessesCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,10 +393,11 @@
 		};
 		86BFCAA21F75279300C9F50C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A7B5673AD68D6E12B7F039A /* Pods-HeyYouProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = HeyYouProject/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/HeyYouProject/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huuphongnguyen.heyyouproject.HeyYouProject;
@@ -291,10 +409,11 @@
 		};
 		86BFCAA31F75279300C9F50C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDBB5E0C33352AEBA5FEA01B /* Pods-HeyYouProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = HeyYouProject/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/HeyYouProject/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huuphongnguyen.heyyouproject.HeyYouProject;

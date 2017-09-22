@@ -19,10 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        
-        let framecontroller = FrameController(collectionViewLayout: layout)
+        let framecontroller = FrameController()
         window?.rootViewController = framecontroller
         
         return true
