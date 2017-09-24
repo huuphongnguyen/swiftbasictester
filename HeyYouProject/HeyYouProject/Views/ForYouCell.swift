@@ -21,6 +21,6 @@ class ForYouCell: UICollectionViewCell {
     }
     
     func setupViews() {
-        backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
+        backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     }
 }

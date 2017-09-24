@@ -16,8 +16,8 @@ class FrameController: UIViewController {
     
     var horizontalBarRightAnchorConstant: NSLayoutConstraint?
     
-    let customNavigationBarView: customNavigationBar = {
-        let view = customNavigationBar()
+    let customNavigationBarView: CustomNavigationBar = {
+        let view = CustomNavigationBar()
         view.isUserInteractionEnabled = true
         return view
     }()
@@ -57,9 +57,14 @@ class FrameController: UIViewController {
     }
     
     func setupViews() {
+        customNavigationBarView.framecontroller = self
+        
         let marginValue = self.view.frame.size.height/12
         
         view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
+        let yourGreatHeymesses_tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleYourGreatHeymessesViewAppear))
+        customNavigationBarView.yourGreatHeymessesLabel.addGestureRecognizer(yourGreatHeymesses_tapGesture)
 
         view.addSubview(frameCollectionView)
         frameCollectionView.anchor(view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: marginValue, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
@@ -69,13 +74,16 @@ class FrameController: UIViewController {
         customNavigationBarView.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: height_customNavigationBarView)
         
         let horizontalBarRightAnchorConstantValue = view.frame.size.width - (view.frame.size.width * 1/3.5)
+        let height_horizontalBar: CGFloat = 5
         customNavigationBarView.addSubview(horizontalBar)
-        horizontalBar.anchor(nil, left: customNavigationBarView.leftAnchor, bottom: customNavigationBarView.bottomAnchor, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 7)
+        horizontalBar.anchor(nil, left: customNavigationBarView.leftAnchor, bottom: customNavigationBarView.bottomAnchor, right: nil, topConstant: 0, leftConstant: 10, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: height_horizontalBar)
+        horizontalBar.layer.cornerRadius = height_horizontalBar/2
         horizontalBarRightAnchorConstant = horizontalBar.rightAnchor.constraint(equalTo: customNavigationBarView.rightAnchor)
         horizontalBarRightAnchorConstant?.isActive = true
         horizontalBarRightAnchorConstant?.constant = -horizontalBarRightAnchorConstantValue
     }
     
+    // MARK: - DATASOURCE
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -87,15 +95,37 @@ class FrameController: UIViewController {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.item == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID_ForYou, for: indexPath) as! ForYouCell
+            controllerToManageCell(viewcontroller: ForYouController(), cell: cell)
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID_YourGreatHeyMesses, for: indexPath) as! YourGreatHeyMessesCell
+            let yourgreatheymessescontroller = YourGreatHeyMessesController()
+            controllerToManageCell(viewcontroller: yourgreatheymessescontroller, cell: cell)
             return cell
         }
         
     }
     
+    // MARK: - Function
+    @objc func handleYourGreatHeymessesViewAppear() {
+             self.frameCollectionView.contentOffset.x = self.view.frame.size.width
+    }
     
+    func controllerToManageCell(viewcontroller: UIViewController, cell: UICollectionViewCell) {
+        let infoVC = viewcontroller
+        self.addChildViewController(infoVC)
+        cell.contentView.addSubview(infoVC.view)
+        
+        infoVC.view.translatesAutoresizingMaskIntoConstraints = false
+        cell.contentView.addConstraint(NSLayoutConstraint(item: infoVC.view, attribute: NSLayoutAttribute.leading, relatedBy: NSLayoutRelation.equal, toItem: cell.contentView, attribute: NSLayoutAttribute.leading, multiplier: 1.0, constant: 0.0))
+        cell.contentView.addConstraint(NSLayoutConstraint(item: infoVC.view, attribute: NSLayoutAttribute.trailing, relatedBy: NSLayoutRelation.equal, toItem: cell.contentView, attribute: NSLayoutAttribute.trailing, multiplier: 1.0, constant: 0.0))
+        cell.contentView.addConstraint(NSLayoutConstraint(item: infoVC.view, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: cell.contentView, attribute: NSLayoutAttribute.top, multiplier: 1.0, constant: 0.0))
+        cell.contentView.addConstraint(NSLayoutConstraint(item: infoVC.view, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: cell.contentView, attribute: NSLayoutAttribute.bottom, multiplier: 1.0, constant: 0.0))
+        
+        infoVC.didMove(toParentViewController: self)
+        infoVC.view.layoutIfNeeded()
+
+    }
 
 }
 
@@ -121,21 +151,24 @@ extension FrameController: UICollectionViewDelegate, UICollectionViewDelegateFlo
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let horizontalBarRightAnchorConstantValue = view.frame.size.width - (view.frame.size.width * 1/3.5)
         let increaseValue = scrollView.contentOffset.x
-        horizontalBarRightAnchorConstant?.constant = -horizontalBarRightAnchorConstantValue + increaseValue
-        
-        if scrollView.contentOffset.x == 0 {
-            UIView.animate(withDuration: 0.5, animations: {
-                self.horizontalBar.alpha = 1
-            })
-            
-        } else if scrollView.contentOffset.x == self.view.frame.size.width {
-            UIView.animate(withDuration: 0.5, animations: {
-                self.horizontalBar.alpha = 1
-            })
-            
+        var a: CGFloat = CGFloat()
+        if scrollView.contentOffset.x <= 100 {
+                a = 0
+        } else {
+                a = 10
         }
+        let increaseValueX = scrollView.contentOffset.x - a
+        horizontalBarRightAnchorConstant?.constant = -horizontalBarRightAnchorConstantValue + (increaseValueX * (1 - 1/3.5))
+        customNavigationBarView.forYouButtonViewLeftAnchorConstant?.constant = (-increaseValue * 1/3.5)/2
+        customNavigationBarView.yourGreateHeymessesButtonViewRightAnchorConstant?.constant = (-increaseValue * 1/3.5)
+        
+        let MAGICAL = (scrollView.contentOffset.x/scrollView.bounds.size.width)
+        horizontalBar.alpha = 1 - MAGICAL
+        customNavigationBarView.yourGreatHeymessesLabel.alpha = 0.3 + MAGICAL
+        customNavigationBarView.forYouLabel.alpha = 1 - MAGICAL
         
     }
+    
     
     
     
