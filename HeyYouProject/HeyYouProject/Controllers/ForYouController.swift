@@ -11,8 +11,48 @@ import LBTAComponents
 
 class ForYouController: UIViewController {
     
+    var framecontroller: FrameController?
+    
+    let logoImageView: UIImageView = {
+        let imageview = UIImageView()
+        imageview.contentMode = .scaleAspectFit
+        imageview.clipsToBounds = true
+        imageview.isUserInteractionEnabled = false
+        imageview.image = UIImage(named: "Logo")
+        return imageview
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
+        setupViews()
+    }
+    
+    func setupViews() {
+        view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        
+        let shareInfoUserTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleShareInfoUser))
+        self.framecontroller?.customNavigationBarView.shareInfoUserButtonView.addGestureRecognizer(shareInfoUserTapGesture)
+        
+        let width_logoImageView = framecontroller?.horizontalBar.frame.size.width
+        let height_logoImageView = width_logoImageView
+        view.addSubview(logoImageView)
+        logoImageView.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: view.frame.size.width/10, leftConstant: 10, bottomConstant: 0, rightConstant: 0, widthConstant: width_logoImageView!, heightConstant: height_logoImageView!)
+    }
+    
+    @objc func handleShareInfoUser() {
+        print("Share Info User")
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -9,4 +9,6 @@ target 'HeyYouProject' do
 
   pod "LBTAComponents"
 
+  pod 'lottie-ios' 
+
 end

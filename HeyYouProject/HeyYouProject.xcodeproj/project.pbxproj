@@ -19,6 +19,8 @@
 		86BFCA981F75279300C9F50C /* HeyYouProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 86BFCA961F75279300C9F50C /* HeyYouProject.xcdatamodeld */; };
 		86BFCA9A1F75279300C9F50C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86BFCA991F75279300C9F50C /* Assets.xcassets */; };
 		86BFCA9D1F75279300C9F50C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86BFCA9B1F75279300C9F50C /* LaunchScreen.storyboard */; };
+		86E68B881F7814870018D81D /* ShareInfoButton.json in Resources */ = {isa = PBXBuildFile; fileRef = 86E68B871F7814870018D81D /* ShareInfoButton.json */; };
+		86E68B8A1F781B880018D81D /* WritingHeyMessButton.json in Resources */ = {isa = PBXBuildFile; fileRef = 86E68B891F781B880018D81D /* WritingHeyMessButton.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		86BFCA991F75279300C9F50C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86BFCA9C1F75279300C9F50C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86BFCA9E1F75279300C9F50C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86E68B871F7814870018D81D /* ShareInfoButton.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ShareInfoButton.json; path = ../../../../../Desktop/ShareInfoButton.json; sourceTree = "<group>"; };
+		86E68B891F781B880018D81D /* WritingHeyMessButton.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = WritingHeyMessButton.json; path = ../../../../../Desktop/WritingHeyMessButton.json; sourceTree = "<group>"; };
 		DDBB5E0C33352AEBA5FEA01B /* Pods-HeyYouProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyYouProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-HeyYouProject/Pods-HeyYouProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,11 +119,21 @@
 		86BFCA8E1F75279300C9F50C /* HeyYouProject */ = {
 			isa = PBXGroup;
 			children = (
+				86E68B841F7811910018D81D /* Animation Icons */,
 				86496B1B1F75495A000CA673 /* Views */,
 				86496B1A1F75494C000CA673 /* Controllers */,
 				86496B191F75493E000CA673 /* Supporting Files */,
 			);
 			path = HeyYouProject;
+			sourceTree = "<group>";
+		};
+		86E68B841F7811910018D81D /* Animation Icons */ = {
+			isa = PBXGroup;
+			children = (
+				86E68B891F781B880018D81D /* WritingHeyMessButton.json */,
+				86E68B871F7814870018D81D /* ShareInfoButton.json */,
+			);
+			path = "Animation Icons";
 			sourceTree = "<group>";
 		};
 		FFD4E7CA21F8EA158202F1A4 /* Frameworks */ = {
@@ -195,6 +209,8 @@
 				86BFCA9D1F75279300C9F50C /* LaunchScreen.storyboard in Resources */,
 				86BFCA9A1F75279300C9F50C /* Assets.xcassets in Resources */,
 				86BFCA951F75279300C9F50C /* Main.storyboard in Resources */,
+				86E68B881F7814870018D81D /* ShareInfoButton.json in Resources */,
+				86E68B8A1F781B880018D81D /* WritingHeyMessButton.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,10 +240,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HeyYouProject/Pods-HeyYouProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/LBTAComponents/LBTAComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LBTAComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

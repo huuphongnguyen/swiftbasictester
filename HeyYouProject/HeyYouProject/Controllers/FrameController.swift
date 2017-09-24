@@ -11,6 +11,8 @@ import LBTAComponents
 
 class FrameController: UIViewController {
     
+    
+    
     private let cellID_ForYou = "CELLID"
     private let cellID_YourGreatHeyMesses = "cellid"
     
@@ -34,6 +36,7 @@ class FrameController: UIViewController {
         
         let collectionview = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionview.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        collectionview.showsHorizontalScrollIndicator = false
         
         collectionview.register(ForYouCell.self, forCellWithReuseIdentifier: cellID_ForYou)
         collectionview.register(YourGreatHeyMessesCell.self, forCellWithReuseIdentifier: cellID_YourGreatHeyMesses)
@@ -95,11 +98,14 @@ class FrameController: UIViewController {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.item == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID_ForYou, for: indexPath) as! ForYouCell
-            controllerToManageCell(viewcontroller: ForYouController(), cell: cell)
+            let foryoucontroller = ForYouController()
+            foryoucontroller.framecontroller = self
+            controllerToManageCell(viewcontroller: foryoucontroller, cell: cell)
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID_YourGreatHeyMesses, for: indexPath) as! YourGreatHeyMessesCell
             let yourgreatheymessescontroller = YourGreatHeyMessesController()
+            yourgreatheymessescontroller.framecontroller = self
             controllerToManageCell(viewcontroller: yourgreatheymessescontroller, cell: cell)
             return cell
         }
@@ -166,6 +172,11 @@ extension FrameController: UICollectionViewDelegate, UICollectionViewDelegateFlo
         horizontalBar.alpha = 1 - MAGICAL
         customNavigationBarView.yourGreatHeymessesLabel.alpha = 0.3 + MAGICAL
         customNavigationBarView.forYouLabel.alpha = 1 - MAGICAL
+        
+        customNavigationBarView.shareInfoUserButtonView.alpha = fabs(MAGICAL - 1)
+        customNavigationBarView.shareInfoUserButtonView.transform = CGAffineTransform(translationX: 0, y: MAGICAL*30)
+        customNavigationBarView.writingHeyMessButtonView.alpha = MAGICAL
+        customNavigationBarView.writingHeyMessButtonView.transform = CGAffineTransform(translationX: 0, y: (-MAGICAL - 31)*(1 - MAGICAL))
         
     }
     
