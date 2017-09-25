@@ -12,6 +12,8 @@ import LBTAComponents
 class YourGreatHeyMessesController: UIViewController {
     
     var framecontroller: FrameController?
+    var writingHeymessTapGesture: UIGestureRecognizer!
+    var refreshControl: UIRefreshControl!
     
     private let cellID0 = "CELLID0"
     private let cellID1 = "CELLID1"
@@ -44,7 +46,13 @@ class YourGreatHeyMessesController: UIViewController {
         tableViewX.showsVerticalScrollIndicator = false
         tableViewX.separatorStyle = .none
         
-        let writingHeymessTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleWritingHeymess))
+        refreshControl = UIRefreshControl()
+        
+        refreshControl.attributedTitle = NSAttributedString(string: "Pulling happiness ...")
+        refreshControl.addTarget(self, action: #selector(refresh), for: UIControlEvents.valueChanged)
+        tableViewX.addSubview(refreshControl)
+        
+        writingHeymessTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleWritingHeymess))
         framecontroller?.customNavigationBarView.writingHeyMessButtonView.addGestureRecognizer(writingHeymessTapGesture)
         
         tableViewX.delegate = self
@@ -57,6 +65,13 @@ class YourGreatHeyMessesController: UIViewController {
     
     @objc func handleWritingHeymess() {
         print("Writing Heymess")
+    }
+    
+    @objc func refresh() {
+        // Code to refresh table view
+        refreshControl.beginRefreshing()
+        print("refreshhhhhh")
+        refreshControl.endRefreshing()
     }
 }
 
@@ -79,8 +94,9 @@ extension YourGreatHeyMessesController: UITableViewDataSource, UITableViewDelega
             let cell = tableView.dequeueReusableCell(withIdentifier: cellID0, for: indexPath) as! InfoUsersTableViewCell
             
             cell.selectionStyle = .none
-            
-            cell.textLabel?.text = "0"
+   
+            cell.heyIDLabel.text = "15071997"
+            cell.nameUserLabel.text = "Nguyễn Hữu Phong"
             
             return cell
         } else {

@@ -23,6 +23,7 @@
 		86BFCA981F75279300C9F50C /* HeyYouProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 86BFCA961F75279300C9F50C /* HeyYouProject.xcdatamodeld */; };
 		86BFCA9A1F75279300C9F50C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86BFCA991F75279300C9F50C /* Assets.xcassets */; };
 		86BFCA9D1F75279300C9F50C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86BFCA9B1F75279300C9F50C /* LaunchScreen.storyboard */; };
+		86C020821F7915CD009C5081 /* LauchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C020811F7915CD009C5081 /* LauchController.swift */; };
 		86E68B881F7814870018D81D /* ShareInfoButton.json in Resources */ = {isa = PBXBuildFile; fileRef = 86E68B871F7814870018D81D /* ShareInfoButton.json */; };
 		86E68B8A1F781B880018D81D /* WritingHeyMessButton.json in Resources */ = {isa = PBXBuildFile; fileRef = 86E68B891F781B880018D81D /* WritingHeyMessButton.json */; };
 /* End PBXBuildFile section */
@@ -47,6 +48,7 @@
 		86BFCA991F75279300C9F50C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86BFCA9C1F75279300C9F50C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86BFCA9E1F75279300C9F50C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86C020811F7915CD009C5081 /* LauchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauchController.swift; sourceTree = "<group>"; };
 		86E68B871F7814870018D81D /* ShareInfoButton.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ShareInfoButton.json; path = ../../../../../Desktop/ShareInfoButton.json; sourceTree = "<group>"; };
 		86E68B891F781B880018D81D /* WritingHeyMessButton.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = WritingHeyMessButton.json; path = ../../../../../Desktop/WritingHeyMessButton.json; sourceTree = "<group>"; };
 		DDBB5E0C33352AEBA5FEA01B /* Pods-HeyYouProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyYouProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-HeyYouProject/Pods-HeyYouProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		86496B1A1F75494C000CA673 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				86C020811F7915CD009C5081 /* LauchController.swift */,
 				86BFCA911F75279300C9F50C /* FrameController.swift */,
 				868AC5E71F77A51D0007ADD6 /* ForYouController.swift */,
 				868AC5E51F77A24D0007ADD6 /* YourGreatHeyMessesController.swift */,
@@ -296,6 +299,7 @@
 				86B3172E1F78D31B0051A8B4 /* InfoUserTableViewCell.swift in Sources */,
 				86BFCA981F75279300C9F50C /* HeyYouProject.xcdatamodeld in Sources */,
 				86B317341F78D5580051A8B4 /* InfoUserController.swift in Sources */,
+				86C020821F7915CD009C5081 /* LauchController.swift in Sources */,
 				86496B1F1F754981000CA673 /* ForYouCell.swift in Sources */,
 				86B317361F78D5A90051A8B4 /* HeymessController.swift in Sources */,
 				86B317321F78D3FF0051A8B4 /* YourGreatHeymessesTableViewCell.swift in Sources */,
@@ -439,6 +443,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N3H5U54E25;
 				INFOPLIST_FILE = "$(SRCROOT)/HeyYouProject/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -455,6 +460,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N3H5U54E25;
 				INFOPLIST_FILE = "$(SRCROOT)/HeyYouProject/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

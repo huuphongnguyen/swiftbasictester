@@ -19,8 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
-        let framecontroller = FrameController()
-        window?.rootViewController = framecontroller
+        let lauchcontroller = LauchController()
+        window?.rootViewController = lauchcontroller
         
         return true
     }
