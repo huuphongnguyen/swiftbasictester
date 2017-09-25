@@ -44,7 +44,6 @@ class YourGreatHeyMessesController: UIViewController {
         
         tableViewX.contentInset = UIEdgeInsetsMake(marginValue/2, 0, marginValue, 0)
         tableViewX.showsVerticalScrollIndicator = false
-        tableViewX.separatorStyle = .none
         
         refreshControl = UIRefreshControl()
         
@@ -104,7 +103,9 @@ extension YourGreatHeyMessesController: UITableViewDataSource, UITableViewDelega
             
             cell.selectionStyle = .none
             
-            cell.textLabel?.text = "1"
+            cell.heymessLabel.text = "This is the very first time I have ever written a heymess on my new application, an app such as Sharahah but this is more interesting and amazing. You have 50% chance to anonymous onto each Heymess you send to your friends."
+            cell.fromLabel.text = "Nguyễn Hữu Phong"
+            
             
             return cell
         }
@@ -114,9 +115,9 @@ extension YourGreatHeyMessesController: UITableViewDataSource, UITableViewDelega
     // MARK: - DELEGATE
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
-            return self.view.frame.size.height/5
+            return self.view.frame.size.height/4
         } else {
-            return self.view.frame.size.height/5
+            return self.view.frame.size.height/4
         }
     }
     
