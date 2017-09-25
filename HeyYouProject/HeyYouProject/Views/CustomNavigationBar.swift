@@ -69,6 +69,29 @@ class CustomNavigationBar: UIView {
         return label
     }()
     
+    lazy var infoUserLabel: UILabel = {
+        let label = UILabel()
+        label.text = "YOUR INFOMATION"
+        label.font = UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.heavy)
+        label.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        label.sizeToFit()
+        label.alpha = 0
+        label.textAlignment = .left
+        label.isUserInteractionEnabled = true
+        return label
+    }()
+    
+    lazy var closeInfoUserControllerButtonView: UIImageView = {
+        let imageview = UIImageView()
+        imageview.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        imageview.contentMode = .scaleAspectFit
+        imageview.clipsToBounds = true
+        imageview.image = UIImage(named: "CloseController")
+        imageview.alpha = 0
+        imageview.isUserInteractionEnabled = true
+        return imageview
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
@@ -121,6 +144,16 @@ class CustomNavigationBar: UIView {
         writingHeyMessButtonView.anchor(nil, left: nil, bottom: nil, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 10, widthConstant: width_writingHeyMessButtonView, heightConstant: height_writingHeyMessButtonView)
         writingHeyMessButtonView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         writingHeyMessButtonView.play()
+        
+        let width_infoUserLabel = widthScreen * 2/3
+        addSubview(infoUserLabel)
+        infoUserLabel.anchor(topAnchor, left: leftAnchor, bottom: bottomAnchor, right: nil, topConstant: 0, leftConstant: 10, bottomConstant: 0, rightConstant: 0, widthConstant: width_infoUserLabel, heightConstant: 0)
+        infoUserLabel.transform = CGAffineTransform(translationX: 0, y: -50)
+        
+        let width_closeInfoUserControllerButtonView = height_customNavigationBar
+        addSubview(closeInfoUserControllerButtonView)
+        closeInfoUserControllerButtonView.anchor(topAnchor, left: nil, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: width_closeInfoUserControllerButtonView, heightConstant: 0)
+        closeInfoUserControllerButtonView.transform = CGAffineTransform(translationX: 0, y: -50)
     }
     
 }

@@ -120,42 +120,30 @@ extension YourGreatHeyMessesController: UITableViewDataSource, UITableViewDelega
         }
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            // When popup to this way, close this view that we need to self.view.removeFromSuperView()
+            let infousercontroller = InfoUserController()
+            infousercontroller.yourgreatheymessescontroller = self
+            self.addChildViewController(infousercontroller)
+            infousercontroller.view.frame = self.view.frame
+            self.view.addSubview(infousercontroller.view)
+            infousercontroller.didMove(toParentViewController: self)
+        } else {
+            // When popup to this way, close this view that we need to self.view.removeFromSuperView()
+            let heymesscontroller = HeymessController()
+            heymesscontroller.yourgreatheymessescontroller = self
+            self.addChildViewController(heymesscontroller)
+            heymesscontroller.view.frame = self.view.frame
+            self.view.addSubview(heymesscontroller.view)
+            heymesscontroller.didMove(toParentViewController: self)
+        }
+    }
 }
 
-class InfoUsersTableViewCell: UITableViewCell {
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        setupViews()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setupViews()
-    }
-    
-    func setupViews() {
-        backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-    }
-}
 
-class YourGreatHeyMessesTableViewCell: UITableViewCell {
-    
-    
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        setupViews()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setupViews()
-    }
-    
-    func setupViews() {
-        backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-    }
-}
+
+
 
 
 

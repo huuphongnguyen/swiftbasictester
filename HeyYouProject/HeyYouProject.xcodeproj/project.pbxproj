@@ -13,6 +13,10 @@
 		86496B211F754998000CA673 /* YourGreateHeyMessesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86496B201F754998000CA673 /* YourGreateHeyMessesCell.swift */; };
 		868AC5E61F77A24D0007ADD6 /* YourGreatHeyMessesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868AC5E51F77A24D0007ADD6 /* YourGreatHeyMessesController.swift */; };
 		868AC5E81F77A51D0007ADD6 /* ForYouController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868AC5E71F77A51D0007ADD6 /* ForYouController.swift */; };
+		86B3172E1F78D31B0051A8B4 /* InfoUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B3172D1F78D31B0051A8B4 /* InfoUserTableViewCell.swift */; };
+		86B317321F78D3FF0051A8B4 /* YourGreatHeymessesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B317311F78D3FF0051A8B4 /* YourGreatHeymessesTableViewCell.swift */; };
+		86B317341F78D5580051A8B4 /* InfoUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B317331F78D5580051A8B4 /* InfoUserController.swift */; };
+		86B317361F78D5A90051A8B4 /* HeymessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B317351F78D5A90051A8B4 /* HeymessController.swift */; };
 		86BFCA901F75279300C9F50C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BFCA8F1F75279300C9F50C /* AppDelegate.swift */; };
 		86BFCA921F75279300C9F50C /* FrameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BFCA911F75279300C9F50C /* FrameController.swift */; };
 		86BFCA951F75279300C9F50C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86BFCA931F75279300C9F50C /* Main.storyboard */; };
@@ -31,6 +35,10 @@
 		86496B201F754998000CA673 /* YourGreateHeyMessesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourGreateHeyMessesCell.swift; sourceTree = "<group>"; };
 		868AC5E51F77A24D0007ADD6 /* YourGreatHeyMessesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourGreatHeyMessesController.swift; sourceTree = "<group>"; };
 		868AC5E71F77A51D0007ADD6 /* ForYouController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouController.swift; sourceTree = "<group>"; };
+		86B3172D1F78D31B0051A8B4 /* InfoUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoUserTableViewCell.swift; sourceTree = "<group>"; };
+		86B317311F78D3FF0051A8B4 /* YourGreatHeymessesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourGreatHeymessesTableViewCell.swift; sourceTree = "<group>"; };
+		86B317331F78D5580051A8B4 /* InfoUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoUserController.swift; sourceTree = "<group>"; };
+		86B317351F78D5A90051A8B4 /* HeymessController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeymessController.swift; sourceTree = "<group>"; };
 		86BFCA8C1F75279300C9F50C /* HeyYouProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeyYouProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86BFCA8F1F75279300C9F50C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86BFCA911F75279300C9F50C /* FrameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameController.swift; sourceTree = "<group>"; };
@@ -84,6 +92,8 @@
 				86BFCA911F75279300C9F50C /* FrameController.swift */,
 				868AC5E71F77A51D0007ADD6 /* ForYouController.swift */,
 				868AC5E51F77A24D0007ADD6 /* YourGreatHeyMessesController.swift */,
+				86B317331F78D5580051A8B4 /* InfoUserController.swift */,
+				86B317351F78D5A90051A8B4 /* HeymessController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -94,6 +104,8 @@
 				86496B1C1F754971000CA673 /* CustomNavigationBar.swift */,
 				86496B1E1F754981000CA673 /* ForYouCell.swift */,
 				86496B201F754998000CA673 /* YourGreateHeyMessesCell.swift */,
+				86B3172D1F78D31B0051A8B4 /* InfoUserTableViewCell.swift */,
+				86B317311F78D3FF0051A8B4 /* YourGreatHeymessesTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -281,8 +293,12 @@
 				868AC5E81F77A51D0007ADD6 /* ForYouController.swift in Sources */,
 				86BFCA921F75279300C9F50C /* FrameController.swift in Sources */,
 				86BFCA901F75279300C9F50C /* AppDelegate.swift in Sources */,
+				86B3172E1F78D31B0051A8B4 /* InfoUserTableViewCell.swift in Sources */,
 				86BFCA981F75279300C9F50C /* HeyYouProject.xcdatamodeld in Sources */,
+				86B317341F78D5580051A8B4 /* InfoUserController.swift in Sources */,
 				86496B1F1F754981000CA673 /* ForYouCell.swift in Sources */,
+				86B317361F78D5A90051A8B4 /* HeymessController.swift in Sources */,
+				86B317321F78D3FF0051A8B4 /* YourGreatHeymessesTableViewCell.swift in Sources */,
 				868AC5E61F77A24D0007ADD6 /* YourGreatHeyMessesController.swift in Sources */,
 				86496B211F754998000CA673 /* YourGreateHeyMessesCell.swift in Sources */,
 			);
