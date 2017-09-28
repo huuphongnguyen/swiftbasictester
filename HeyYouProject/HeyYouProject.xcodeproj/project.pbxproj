@@ -8,11 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		024F03C779EA5F2146A3B08F /* Pods_HeyYouProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08777A1E32D1BB1BF1E18DB0 /* Pods_HeyYouProject.framework */; };
+		860208461F7AD42500BA45CE /* SettingsTableViewCell_Section0.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860208451F7AD42500BA45CE /* SettingsTableViewCell_Section0.swift */; };
+		860208481F7AD43F00BA45CE /* SettingsTableViewCell_Section1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860208471F7AD43F00BA45CE /* SettingsTableViewCell_Section1.swift */; };
+		862422091F7A258300365242 /* HeaderViewSectionHeymesses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862422081F7A258300365242 /* HeaderViewSectionHeymesses.swift */; };
+		8624220C1F7A29C300365242 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8624220B1F7A29C300365242 /* Helpers.swift */; };
+		8624220E1F7A3CBB00365242 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8624220D1F7A3CBB00365242 /* SettingsController.swift */; };
 		86496B1D1F754971000CA673 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86496B1C1F754971000CA673 /* CustomNavigationBar.swift */; };
 		86496B1F1F754981000CA673 /* ForYouCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86496B1E1F754981000CA673 /* ForYouCell.swift */; };
 		86496B211F754998000CA673 /* YourGreateHeyMessesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86496B201F754998000CA673 /* YourGreateHeyMessesCell.swift */; };
 		868AC5E61F77A24D0007ADD6 /* YourGreatHeyMessesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868AC5E51F77A24D0007ADD6 /* YourGreatHeyMessesController.swift */; };
 		868AC5E81F77A51D0007ADD6 /* ForYouController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868AC5E71F77A51D0007ADD6 /* ForYouController.swift */; };
+		86AAF6A21F7CFA8C00CC5DB0 /* sendButton.json in Resources */ = {isa = PBXBuildFile; fileRef = 86AAF6A01F7CFA8C00CC5DB0 /* sendButton.json */; };
+		86AAF6A31F7CFA8C00CC5DB0 /* likeButton.json in Resources */ = {isa = PBXBuildFile; fileRef = 86AAF6A11F7CFA8C00CC5DB0 /* likeButton.json */; };
 		86B3172E1F78D31B0051A8B4 /* InfoUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B3172D1F78D31B0051A8B4 /* InfoUserTableViewCell.swift */; };
 		86B317321F78D3FF0051A8B4 /* YourGreatHeymessesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B317311F78D3FF0051A8B4 /* YourGreatHeymessesTableViewCell.swift */; };
 		86B317341F78D5580051A8B4 /* InfoUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B317331F78D5580051A8B4 /* InfoUserController.swift */; };
@@ -31,11 +38,18 @@
 /* Begin PBXFileReference section */
 		08777A1E32D1BB1BF1E18DB0 /* Pods_HeyYouProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeyYouProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A7B5673AD68D6E12B7F039A /* Pods-HeyYouProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyYouProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HeyYouProject/Pods-HeyYouProject.debug.xcconfig"; sourceTree = "<group>"; };
+		860208451F7AD42500BA45CE /* SettingsTableViewCell_Section0.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell_Section0.swift; sourceTree = "<group>"; };
+		860208471F7AD43F00BA45CE /* SettingsTableViewCell_Section1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell_Section1.swift; sourceTree = "<group>"; };
+		862422081F7A258300365242 /* HeaderViewSectionHeymesses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewSectionHeymesses.swift; sourceTree = "<group>"; };
+		8624220B1F7A29C300365242 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		8624220D1F7A3CBB00365242 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		86496B1C1F754971000CA673 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		86496B1E1F754981000CA673 /* ForYouCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouCell.swift; sourceTree = "<group>"; };
 		86496B201F754998000CA673 /* YourGreateHeyMessesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourGreateHeyMessesCell.swift; sourceTree = "<group>"; };
 		868AC5E51F77A24D0007ADD6 /* YourGreatHeyMessesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourGreatHeyMessesController.swift; sourceTree = "<group>"; };
 		868AC5E71F77A51D0007ADD6 /* ForYouController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouController.swift; sourceTree = "<group>"; };
+		86AAF6A01F7CFA8C00CC5DB0 /* sendButton.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = sendButton.json; path = "../../../../../Desktop/HeyYou/HeyYou/Animation Icons/sendButton.json"; sourceTree = "<group>"; };
+		86AAF6A11F7CFA8C00CC5DB0 /* likeButton.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = likeButton.json; path = "../../../../../Desktop/HeyYou/HeyYou/Animation Icons/likeButton.json"; sourceTree = "<group>"; };
 		86B3172D1F78D31B0051A8B4 /* InfoUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoUserTableViewCell.swift; sourceTree = "<group>"; };
 		86B317311F78D3FF0051A8B4 /* YourGreatHeymessesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourGreatHeymessesTableViewCell.swift; sourceTree = "<group>"; };
 		86B317331F78D5580051A8B4 /* InfoUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoUserController.swift; sourceTree = "<group>"; };
@@ -75,6 +89,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8624220A1F7A29A200365242 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				8624220B1F7A29C300365242 /* Helpers.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		86496B191F75493E000CA673 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +119,7 @@
 				868AC5E51F77A24D0007ADD6 /* YourGreatHeyMessesController.swift */,
 				86B317331F78D5580051A8B4 /* InfoUserController.swift */,
 				86B317351F78D5A90051A8B4 /* HeymessController.swift */,
+				8624220D1F7A3CBB00365242 /* SettingsController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -108,7 +131,10 @@
 				86496B1E1F754981000CA673 /* ForYouCell.swift */,
 				86496B201F754998000CA673 /* YourGreateHeyMessesCell.swift */,
 				86B3172D1F78D31B0051A8B4 /* InfoUserTableViewCell.swift */,
+				862422081F7A258300365242 /* HeaderViewSectionHeymesses.swift */,
 				86B317311F78D3FF0051A8B4 /* YourGreatHeymessesTableViewCell.swift */,
+				860208451F7AD42500BA45CE /* SettingsTableViewCell_Section0.swift */,
+				860208471F7AD43F00BA45CE /* SettingsTableViewCell_Section1.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -134,6 +160,7 @@
 		86BFCA8E1F75279300C9F50C /* HeyYouProject */ = {
 			isa = PBXGroup;
 			children = (
+				8624220A1F7A29A200365242 /* Utilities */,
 				86E68B841F7811910018D81D /* Animation Icons */,
 				86496B1B1F75495A000CA673 /* Views */,
 				86496B1A1F75494C000CA673 /* Controllers */,
@@ -145,6 +172,8 @@
 		86E68B841F7811910018D81D /* Animation Icons */ = {
 			isa = PBXGroup;
 			children = (
+				86AAF6A11F7CFA8C00CC5DB0 /* likeButton.json */,
+				86AAF6A01F7CFA8C00CC5DB0 /* sendButton.json */,
 				86E68B891F781B880018D81D /* WritingHeyMessButton.json */,
 				86E68B871F7814870018D81D /* ShareInfoButton.json */,
 			);
@@ -224,8 +253,10 @@
 				86BFCA9D1F75279300C9F50C /* LaunchScreen.storyboard in Resources */,
 				86BFCA9A1F75279300C9F50C /* Assets.xcassets in Resources */,
 				86BFCA951F75279300C9F50C /* Main.storyboard in Resources */,
+				86AAF6A21F7CFA8C00CC5DB0 /* sendButton.json in Resources */,
 				86E68B881F7814870018D81D /* ShareInfoButton.json in Resources */,
 				86E68B8A1F781B880018D81D /* WritingHeyMessButton.json in Resources */,
+				86AAF6A31F7CFA8C00CC5DB0 /* likeButton.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,12 +329,17 @@
 				86BFCA901F75279300C9F50C /* AppDelegate.swift in Sources */,
 				86B3172E1F78D31B0051A8B4 /* InfoUserTableViewCell.swift in Sources */,
 				86BFCA981F75279300C9F50C /* HeyYouProject.xcdatamodeld in Sources */,
+				862422091F7A258300365242 /* HeaderViewSectionHeymesses.swift in Sources */,
+				860208461F7AD42500BA45CE /* SettingsTableViewCell_Section0.swift in Sources */,
 				86B317341F78D5580051A8B4 /* InfoUserController.swift in Sources */,
+				8624220E1F7A3CBB00365242 /* SettingsController.swift in Sources */,
+				860208481F7AD43F00BA45CE /* SettingsTableViewCell_Section1.swift in Sources */,
 				86C020821F7915CD009C5081 /* LauchController.swift in Sources */,
 				86496B1F1F754981000CA673 /* ForYouCell.swift in Sources */,
 				86B317361F78D5A90051A8B4 /* HeymessController.swift in Sources */,
 				86B317321F78D3FF0051A8B4 /* YourGreatHeymessesTableViewCell.swift in Sources */,
 				868AC5E61F77A24D0007ADD6 /* YourGreatHeyMessesController.swift in Sources */,
+				8624220C1F7A29C300365242 /* Helpers.swift in Sources */,
 				86496B211F754998000CA673 /* YourGreateHeyMessesCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

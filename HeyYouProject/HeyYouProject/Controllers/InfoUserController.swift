@@ -13,6 +13,7 @@ class InfoUserController: UIViewController {
     
     var yourgreatheymessescontroller: YourGreatHeyMessesController?
     var closeController_tapGesture: UIGestureRecognizer!
+    var settingsController_tapGesture: UIGestureRecognizer!
     
     let customNavigationBar_InfoUserController: UIView = {
         let view = UIView()
@@ -52,6 +53,10 @@ class InfoUserController: UIViewController {
         
         closeController_tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleCloseInfoUserController))
         self.yourgreatheymessescontroller?.framecontroller?.customNavigationBarView.closeControllerButtonView.addGestureRecognizer(closeController_tapGesture)
+        
+        settingsController_tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleOpenSettingsController))
+        
+        self.yourgreatheymessescontroller?.framecontroller?.customNavigationBarView.settingsButtonView.addGestureRecognizer(settingsController_tapGesture)
     }
     
     func animationWhenAppear() {
@@ -95,6 +100,17 @@ class InfoUserController: UIViewController {
     
     @objc func handleCloseInfoUserController() {
         animationWhenDisappear()
+    }
+    
+    @objc func handleOpenSettingsController() {
+        print("Settings Controller")
+        // When popup to this way, close this view that we need to self.view.removeFromSuperView()
+        let settingscontroller = SettingsController()
+        settingscontroller.infousercontroller = self
+        self.addChildViewController(settingscontroller)
+        settingscontroller.view.frame = self.view.frame
+        self.view.addSubview(settingscontroller.view)
+        settingscontroller.didMove(toParentViewController: self)
     }
     
     func animationWhenDisappear() {

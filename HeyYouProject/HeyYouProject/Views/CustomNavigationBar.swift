@@ -105,10 +105,31 @@ class CustomNavigationBar: UIView {
     
     lazy var closeControllerButtonView: UIImageView = {
         let imageview = UIImageView()
-        imageview.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         imageview.contentMode = .scaleAspectFit
         imageview.clipsToBounds = true
         imageview.image = UIImage(named: "CloseController")
+        imageview.alpha = 0
+        imageview.isUserInteractionEnabled = true
+        return imageview
+    }()
+    
+    lazy var settingsLabel: UILabel = {
+        let label = UILabel()
+        label.text = "SETTINGS"
+        label.font = UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.heavy)
+        label.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        label.sizeToFit()
+        label.alpha = 0
+        label.textAlignment = .left
+        label.isUserInteractionEnabled = true
+        return label
+    }()
+    
+    lazy var shareHeymessButtonView: UIImageView = {
+        let imageview = UIImageView()
+        imageview.contentMode = .scaleAspectFit
+        imageview.clipsToBounds = true
+        imageview.image = UIImage(named: "ShareHeymess")
         imageview.alpha = 0
         imageview.isUserInteractionEnabled = true
         return imageview
@@ -185,6 +206,15 @@ class CustomNavigationBar: UIView {
         addSubview(settingsButtonView)
         settingsButtonView.anchor(topAnchor, left: nil, bottom: bottomAnchor, right: closeControllerButtonView.leftAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 5, widthConstant: width_closeInfoUserControllerButtonView, heightConstant: 0)
         settingsButtonView.transform = CGAffineTransform(translationX: 0, y: 50)
+        
+        addSubview(shareHeymessButtonView)
+        shareHeymessButtonView.anchor(topAnchor, left: nil, bottom: bottomAnchor, right: closeControllerButtonView.leftAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 5, widthConstant: width_closeInfoUserControllerButtonView, heightConstant: 0)
+        shareHeymessButtonView.transform = CGAffineTransform(translationX: 0, y: 50)
+
+        let width_settingsLabel = widthScreen * 2/3
+        addSubview(settingsLabel)
+        settingsLabel.anchor(topAnchor, left: leftAnchor, bottom: bottomAnchor, right: nil, topConstant: 0, leftConstant: 10, bottomConstant: 0, rightConstant: 0, widthConstant: width_settingsLabel, heightConstant: 0)
+        settingsLabel.transform = CGAffineTransform(translationX: 0, y: -50)
     }
     
 }

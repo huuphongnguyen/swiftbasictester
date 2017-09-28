@@ -24,12 +24,25 @@ class YourGreatHeyMessesController: UIViewController {
         return tableview
     }()
     
+    let headerViewSectionHeymesses: HeaderViewSectionHeymesses = {
+        let view = HeaderViewSectionHeymesses()
+        view.label.text = "10 HEYMESSES"
+        return view
+    }()
+    
+    // MARK: - Life Cyrcle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
         setupTableView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    
+    //MARK: - Function
     func setupViews() {
         view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
@@ -44,6 +57,7 @@ class YourGreatHeyMessesController: UIViewController {
         
         tableViewX.contentInset = UIEdgeInsetsMake(marginValue/2, 0, marginValue, 0)
         tableViewX.showsVerticalScrollIndicator = false
+        tableViewX.separatorInset = UIEdgeInsetsMake(0, 10, 0, 10)
         
         refreshControl = UIRefreshControl()
         
@@ -69,9 +83,36 @@ class YourGreatHeyMessesController: UIViewController {
     @objc func refresh() {
         // Code to refresh table view
         refreshControl.beginRefreshing()
-        print("refreshhhhhh")
+        checkReachability()
         refreshControl.endRefreshing()
     }
+    
+    func checkReachability(){
+        if currentReachabilityStatus == .reachableViaWiFi {
+            print("User is connected to the internet via wifi.")
+        }else if currentReachabilityStatus == .reachableViaWWAN{
+            print("User is connected to the internet via WWAN.")
+        } else {
+            print("There is no internet connection")
+            notificationWhenNoInternetConnection()
+        }
+    }
+    
+    func notificationWhenNoInternetConnection() {
+        self.headerViewSectionHeymesses.internetCheckingView.transform = CGAffineTransform(scaleX: 1, y: 0.1)
+        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.3, options: .curveEaseInOut, animations: {
+            self.headerViewSectionHeymesses.internetCheckingView.alpha = 1
+            self.headerViewSectionHeymesses.internetCheckingView.transform = CGAffineTransform.identity
+        }, completion: { (done) in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4, execute: {
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.headerViewSectionHeymesses.internetCheckingView.alpha = 0
+                    self.headerViewSectionHeymesses.internetCheckingView.transform = CGAffineTransform(scaleX: 1, y: 0.5)
+                })
+            })
+        })
+    }
+    
 }
 
 extension YourGreatHeyMessesController: UITableViewDataSource, UITableViewDelegate {
@@ -125,7 +166,7 @@ extension YourGreatHeyMessesController: UITableViewDataSource, UITableViewDelega
         if section == 0 {
             return self.view.frame.size.height/20
         } else {
-            return self.view.frame.size.height/20
+            return self.view.frame.size.height/16
         }
     }
     
@@ -134,6 +175,14 @@ extension YourGreatHeyMessesController: UITableViewDataSource, UITableViewDelega
             return "Hey You! Great day ♥"
         } else {
             return "10 Heymesses"
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if section == 0 {
+            return nil
+        } else {
+            return headerViewSectionHeymesses
         }
     }
     
@@ -156,6 +205,16 @@ extension YourGreatHeyMessesController: UITableViewDataSource, UITableViewDelega
             heymesscontroller.didMove(toParentViewController: self)
         }
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.section == 1 {
+            cell.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+            UIView.animate(withDuration: 0.5, animations: {
+                cell.transform = CGAffineTransform.identity
+            })
+        }
+    }
+    
 }
 
 
