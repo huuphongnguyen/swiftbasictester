@@ -135,6 +135,57 @@ class CustomNavigationBar: UIView {
         return imageview
     }()
     
+    lazy var writingHeymessLabel: UILabel = {
+        let label = UILabel()
+        label.text = "WRITING..."
+        label.font = UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.heavy)
+        label.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        label.sizeToFit()
+        label.alpha = 0
+        label.textAlignment = .left
+        label.isUserInteractionEnabled = true
+        return label
+    }()
+    
+    let countTextCharacterView: UIView = {
+        let view = UIView()
+        view.alpha = 0
+        return view
+    }()
+    
+    let countTextCharacterLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 12, weight: UIFont.Weight.medium)
+        label.textAlignment = .center
+        label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        label.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        label.text = "0/157"
+        return label
+    }()
+    
+    lazy var closeWritingControllerButtonView: UIImageView = {
+        let imageview = UIImageView()
+        imageview.contentMode = .scaleAspectFit
+        imageview.clipsToBounds = true
+        imageview.image = UIImage(named: "CloseWriting")
+        imageview.alpha = 0
+        imageview.isUserInteractionEnabled = true
+        return imageview
+    }()
+    
+    lazy var sendButtonView: LOTAnimationView = {
+        let lotview = LOTAnimationView(name: "send")
+        lotview.isUserInteractionEnabled = true
+        lotview.loopAnimation = true
+        lotview.contentMode = .scaleAspectFill
+        lotview.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        lotview.alpha = 0
+        lotview.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+        lotview.layer.borderWidth = 2
+        lotview.clipsToBounds = true
+        return lotview
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
@@ -170,6 +221,7 @@ class CustomNavigationBar: UIView {
         yourGreatHeymessesButtonView.anchor(topAnchor, left: nil, bottom: bottomAnchor, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: width_yourGreatHeymessesButtonView, heightConstant: 0)
         yourGreateHeymessesButtonViewRightAnchorConstant = yourGreatHeymessesButtonView.rightAnchor.constraint(equalTo: rightAnchor)
         yourGreateHeymessesButtonViewRightAnchorConstant?.isActive = true
+        
         yourGreatHeymessesButtonView.addSubview(yourGreatHeymessesLabel)
         yourGreatHeymessesLabel.anchor(yourGreatHeymessesButtonView.topAnchor, left: yourGreatHeymessesButtonView.leftAnchor, bottom: yourGreatHeymessesButtonView.bottomAnchor, right: yourGreatHeymessesButtonView.rightAnchor, topConstant: 0, leftConstant: 10, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
 
@@ -198,23 +250,58 @@ class CustomNavigationBar: UIView {
         heymessLabel.anchor(topAnchor, left: leftAnchor, bottom: bottomAnchor, right: nil, topConstant: 0, leftConstant: 10, bottomConstant: 0, rightConstant: 0, widthConstant: width_heymessLabel, heightConstant: 0)
         heymessLabel.transform = CGAffineTransform(translationX: 0, y: -50)
         
-        let width_closeInfoUserControllerButtonView = height_customNavigationBar
+        let width_closeControllerButtonView = height_customNavigationBar
         addSubview(closeControllerButtonView)
-        closeControllerButtonView.anchor(topAnchor, left: nil, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: width_closeInfoUserControllerButtonView, heightConstant: 0)
+        closeControllerButtonView.anchor(topAnchor, left: nil, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: width_closeControllerButtonView, heightConstant: 0)
         closeControllerButtonView.transform = CGAffineTransform(translationX: 0, y: -50)
         
+        let width_closeWritingControllerButtonView = height_customNavigationBar
+        addSubview(closeWritingControllerButtonView)
+        closeWritingControllerButtonView.anchor(topAnchor, left: nil, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: width_closeWritingControllerButtonView, heightConstant: 0)
+        closeWritingControllerButtonView.transform = CGAffineTransform(translationX: 0, y: -50)
+
+        
         addSubview(settingsButtonView)
-        settingsButtonView.anchor(topAnchor, left: nil, bottom: bottomAnchor, right: closeControllerButtonView.leftAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 5, widthConstant: width_closeInfoUserControllerButtonView, heightConstant: 0)
+        settingsButtonView.anchor(topAnchor, left: nil, bottom: bottomAnchor, right: closeControllerButtonView.leftAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 5, widthConstant: width_closeControllerButtonView, heightConstant: 0)
         settingsButtonView.transform = CGAffineTransform(translationX: 0, y: 50)
         
         addSubview(shareHeymessButtonView)
-        shareHeymessButtonView.anchor(topAnchor, left: nil, bottom: bottomAnchor, right: closeControllerButtonView.leftAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 5, widthConstant: width_closeInfoUserControllerButtonView, heightConstant: 0)
+        shareHeymessButtonView.anchor(topAnchor, left: nil, bottom: bottomAnchor, right: closeControllerButtonView.leftAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 5, widthConstant: width_closeControllerButtonView, heightConstant: 0)
         shareHeymessButtonView.transform = CGAffineTransform(translationX: 0, y: 50)
 
         let width_settingsLabel = widthScreen * 2/3
         addSubview(settingsLabel)
         settingsLabel.anchor(topAnchor, left: leftAnchor, bottom: bottomAnchor, right: nil, topConstant: 0, leftConstant: 10, bottomConstant: 0, rightConstant: 0, widthConstant: width_settingsLabel, heightConstant: 0)
         settingsLabel.transform = CGAffineTransform(translationX: 0, y: -50)
+        
+        let width_writingHeymessLabel = widthScreen * 2/3
+        addSubview(writingHeymessLabel)
+        writingHeymessLabel.anchor(topAnchor, left: leftAnchor, bottom: bottomAnchor, right: nil, topConstant: 0, leftConstant: 10, bottomConstant: 0, rightConstant: 0, widthConstant: width_writingHeymessLabel, heightConstant: 0)
+        writingHeymessLabel.transform = CGAffineTransform(translationX: -50, y: 0)
+        
+        let width_customNavigationBar = widthScreen
+        let width_countTextCharacterView = width_customNavigationBar/5
+        addSubview(countTextCharacterView)
+        countTextCharacterView.anchor(topAnchor, left: nil, bottom: bottomAnchor, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: width_countTextCharacterView, heightConstant: 0)
+        countTextCharacterView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        countTextCharacterView.transform = CGAffineTransform(translationX: 0, y: -50)
+        
+        let width_countTextCharacterLabel = width_countTextCharacterView
+        let height_countTextCharacterLabel = height_customNavigationBar * 4/5
+        countTextCharacterView.addSubview(countTextCharacterLabel)
+        countTextCharacterLabel.anchor(nil, left: nil, bottom: nil, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: width_countTextCharacterLabel, heightConstant: height_countTextCharacterLabel)
+        countTextCharacterLabel.centerXAnchor.constraint(equalTo: countTextCharacterView.centerXAnchor).isActive = true
+        countTextCharacterLabel.centerYAnchor.constraint(equalTo: countTextCharacterView.centerYAnchor).isActive = true
+        countTextCharacterLabel.layer.cornerRadius = height_countTextCharacterLabel/2
+        countTextCharacterLabel.layer.masksToBounds = true
+        
+        let width_sendButtonView = width_countTextCharacterLabel
+        addSubview(sendButtonView)
+        sendButtonView.anchor(countTextCharacterLabel.topAnchor, left: nil, bottom: countTextCharacterLabel.bottomAnchor, right: closeWritingControllerButtonView.leftAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 5, widthConstant: width_sendButtonView, heightConstant: 0)
+        sendButtonView.transform = CGAffineTransform(scaleX: 0.3, y: 0.3)
+        sendButtonView.layer.cornerRadius = height_countTextCharacterLabel/2
+        sendButtonView.layer.masksToBounds = true
+        
     }
     
 }

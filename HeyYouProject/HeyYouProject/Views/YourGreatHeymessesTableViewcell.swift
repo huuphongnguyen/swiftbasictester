@@ -45,10 +45,8 @@ class YourGreatHeyMessesTableViewCell: UITableViewCell {
     func setupViews() {
         backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
-        let width_heymessLabel = frame.size.width - 20
         addSubview(heymessLabel)
-        heymessLabel.anchor(topAnchor, left: nil, bottom: bottomAnchor, right: nil, topConstant: 10, leftConstant: 0, bottomConstant: frame.size.height*7/8, rightConstant: 0, widthConstant: width_heymessLabel, heightConstant: 0)
-        heymessLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        heymessLabel.anchor(topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 10, leftConstant: 10, bottomConstant: frame.size.height*7/8, rightConstant: 10, widthConstant: 0, heightConstant: 0)
         
         let width_fromLabel = frame.size.width*2/3
         let height_fromLabel = frame.size.height - heymessLabel.frame.size.height - 20

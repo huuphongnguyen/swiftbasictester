@@ -78,6 +78,13 @@ class YourGreatHeyMessesController: UIViewController {
     
     @objc func handleWritingHeymess() {
         print("Writing Heymess")
+        // When popup to this way, close this view that we need to self.view.removeFromSuperView()
+        let writingheymesscontroller = WritingHeymessController()
+        writingheymesscontroller.yourgreateheymesscontroller = self
+        self.addChildViewController(writingheymesscontroller)
+        writingheymesscontroller.view.frame = self.view.frame
+        self.view.addSubview(writingheymesscontroller.view)
+        writingheymesscontroller.didMove(toParentViewController: self)
     }
     
     @objc func refresh() {

@@ -10,15 +10,18 @@
 		024F03C779EA5F2146A3B08F /* Pods_HeyYouProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08777A1E32D1BB1BF1E18DB0 /* Pods_HeyYouProject.framework */; };
 		860208461F7AD42500BA45CE /* SettingsTableViewCell_Section0.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860208451F7AD42500BA45CE /* SettingsTableViewCell_Section0.swift */; };
 		860208481F7AD43F00BA45CE /* SettingsTableViewCell_Section1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860208471F7AD43F00BA45CE /* SettingsTableViewCell_Section1.swift */; };
+		8617C66E1F80F0B500274CF7 /* send.json in Resources */ = {isa = PBXBuildFile; fileRef = 8617C66D1F80F0B500274CF7 /* send.json */; };
+		8617C6701F80F3AE00274CF7 /* whale.json in Resources */ = {isa = PBXBuildFile; fileRef = 8617C66F1F80F3AE00274CF7 /* whale.json */; };
 		862422091F7A258300365242 /* HeaderViewSectionHeymesses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862422081F7A258300365242 /* HeaderViewSectionHeymesses.swift */; };
 		8624220C1F7A29C300365242 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8624220B1F7A29C300365242 /* Helpers.swift */; };
 		8624220E1F7A3CBB00365242 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8624220D1F7A3CBB00365242 /* SettingsController.swift */; };
 		86496B1D1F754971000CA673 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86496B1C1F754971000CA673 /* CustomNavigationBar.swift */; };
 		86496B1F1F754981000CA673 /* ForYouCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86496B1E1F754981000CA673 /* ForYouCell.swift */; };
 		86496B211F754998000CA673 /* YourGreateHeyMessesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86496B201F754998000CA673 /* YourGreateHeyMessesCell.swift */; };
+		8686B5FB1F82102E001609DB /* WAVE.json in Resources */ = {isa = PBXBuildFile; fileRef = 8686B5FA1F82102E001609DB /* WAVE.json */; };
+		8686B5FD1F821769001609DB /* checkCountText.json in Resources */ = {isa = PBXBuildFile; fileRef = 8686B5FC1F821769001609DB /* checkCountText.json */; };
 		868AC5E61F77A24D0007ADD6 /* YourGreatHeyMessesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868AC5E51F77A24D0007ADD6 /* YourGreatHeyMessesController.swift */; };
 		868AC5E81F77A51D0007ADD6 /* ForYouController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868AC5E71F77A51D0007ADD6 /* ForYouController.swift */; };
-		86AAF6A21F7CFA8C00CC5DB0 /* sendButton.json in Resources */ = {isa = PBXBuildFile; fileRef = 86AAF6A01F7CFA8C00CC5DB0 /* sendButton.json */; };
 		86AAF6A31F7CFA8C00CC5DB0 /* likeButton.json in Resources */ = {isa = PBXBuildFile; fileRef = 86AAF6A11F7CFA8C00CC5DB0 /* likeButton.json */; };
 		86B3172E1F78D31B0051A8B4 /* InfoUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B3172D1F78D31B0051A8B4 /* InfoUserTableViewCell.swift */; };
 		86B317321F78D3FF0051A8B4 /* YourGreatHeymessesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B317311F78D3FF0051A8B4 /* YourGreatHeymessesTableViewCell.swift */; };
@@ -33,6 +36,10 @@
 		86C020821F7915CD009C5081 /* LauchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C020811F7915CD009C5081 /* LauchController.swift */; };
 		86E68B881F7814870018D81D /* ShareInfoButton.json in Resources */ = {isa = PBXBuildFile; fileRef = 86E68B871F7814870018D81D /* ShareInfoButton.json */; };
 		86E68B8A1F781B880018D81D /* WritingHeyMessButton.json in Resources */ = {isa = PBXBuildFile; fileRef = 86E68B891F781B880018D81D /* WritingHeyMessButton.json */; };
+		86F861DC1F7F9B140009D593 /* WritingHeymessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F861DB1F7F9B140009D593 /* WritingHeymessController.swift */; };
+		86F861DE1F7F9F080009D593 /* FromView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F861DD1F7F9F080009D593 /* FromView.swift */; };
+		86F861E01F7F9F490009D593 /* ToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F861DF1F7F9F490009D593 /* ToView.swift */; };
+		86F861E21F7FA1560009D593 /* HeymessInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F861E11F7FA1560009D593 /* HeymessInputView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,15 +47,18 @@
 		5A7B5673AD68D6E12B7F039A /* Pods-HeyYouProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyYouProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HeyYouProject/Pods-HeyYouProject.debug.xcconfig"; sourceTree = "<group>"; };
 		860208451F7AD42500BA45CE /* SettingsTableViewCell_Section0.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell_Section0.swift; sourceTree = "<group>"; };
 		860208471F7AD43F00BA45CE /* SettingsTableViewCell_Section1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell_Section1.swift; sourceTree = "<group>"; };
+		8617C66D1F80F0B500274CF7 /* send.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = send.json; path = "../../../../../Desktop/HeyYou/HeyYou/Animation Icons/send.json"; sourceTree = "<group>"; };
+		8617C66F1F80F3AE00274CF7 /* whale.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = whale.json; path = ../../../../../Downloads/whale.json; sourceTree = "<group>"; };
 		862422081F7A258300365242 /* HeaderViewSectionHeymesses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewSectionHeymesses.swift; sourceTree = "<group>"; };
 		8624220B1F7A29C300365242 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		8624220D1F7A3CBB00365242 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		86496B1C1F754971000CA673 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		86496B1E1F754981000CA673 /* ForYouCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouCell.swift; sourceTree = "<group>"; };
 		86496B201F754998000CA673 /* YourGreateHeyMessesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourGreateHeyMessesCell.swift; sourceTree = "<group>"; };
+		8686B5FA1F82102E001609DB /* WAVE.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = WAVE.json; path = ../../../../../Downloads/WAVE.json; sourceTree = "<group>"; };
+		8686B5FC1F821769001609DB /* checkCountText.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = checkCountText.json; path = "../../../../../Desktop/HeyYou/HeyYou/Animation Icons/checkCountText.json"; sourceTree = "<group>"; };
 		868AC5E51F77A24D0007ADD6 /* YourGreatHeyMessesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourGreatHeyMessesController.swift; sourceTree = "<group>"; };
 		868AC5E71F77A51D0007ADD6 /* ForYouController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouController.swift; sourceTree = "<group>"; };
-		86AAF6A01F7CFA8C00CC5DB0 /* sendButton.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = sendButton.json; path = "../../../../../Desktop/HeyYou/HeyYou/Animation Icons/sendButton.json"; sourceTree = "<group>"; };
 		86AAF6A11F7CFA8C00CC5DB0 /* likeButton.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = likeButton.json; path = "../../../../../Desktop/HeyYou/HeyYou/Animation Icons/likeButton.json"; sourceTree = "<group>"; };
 		86B3172D1F78D31B0051A8B4 /* InfoUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoUserTableViewCell.swift; sourceTree = "<group>"; };
 		86B317311F78D3FF0051A8B4 /* YourGreatHeymessesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourGreatHeymessesTableViewCell.swift; sourceTree = "<group>"; };
@@ -65,6 +75,10 @@
 		86C020811F7915CD009C5081 /* LauchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauchController.swift; sourceTree = "<group>"; };
 		86E68B871F7814870018D81D /* ShareInfoButton.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ShareInfoButton.json; path = ../../../../../Desktop/ShareInfoButton.json; sourceTree = "<group>"; };
 		86E68B891F781B880018D81D /* WritingHeyMessButton.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = WritingHeyMessButton.json; path = ../../../../../Desktop/WritingHeyMessButton.json; sourceTree = "<group>"; };
+		86F861DB1F7F9B140009D593 /* WritingHeymessController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingHeymessController.swift; sourceTree = "<group>"; };
+		86F861DD1F7F9F080009D593 /* FromView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FromView.swift; sourceTree = "<group>"; };
+		86F861DF1F7F9F490009D593 /* ToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToView.swift; sourceTree = "<group>"; };
+		86F861E11F7FA1560009D593 /* HeymessInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeymessInputView.swift; sourceTree = "<group>"; };
 		DDBB5E0C33352AEBA5FEA01B /* Pods-HeyYouProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyYouProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-HeyYouProject/Pods-HeyYouProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +134,7 @@
 				86B317331F78D5580051A8B4 /* InfoUserController.swift */,
 				86B317351F78D5A90051A8B4 /* HeymessController.swift */,
 				8624220D1F7A3CBB00365242 /* SettingsController.swift */,
+				86F861DB1F7F9B140009D593 /* WritingHeymessController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -135,6 +150,9 @@
 				86B317311F78D3FF0051A8B4 /* YourGreatHeymessesTableViewCell.swift */,
 				860208451F7AD42500BA45CE /* SettingsTableViewCell_Section0.swift */,
 				860208471F7AD43F00BA45CE /* SettingsTableViewCell_Section1.swift */,
+				86F861DD1F7F9F080009D593 /* FromView.swift */,
+				86F861DF1F7F9F490009D593 /* ToView.swift */,
+				86F861E11F7FA1560009D593 /* HeymessInputView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -172,8 +190,11 @@
 		86E68B841F7811910018D81D /* Animation Icons */ = {
 			isa = PBXGroup;
 			children = (
+				8686B5FC1F821769001609DB /* checkCountText.json */,
+				8686B5FA1F82102E001609DB /* WAVE.json */,
+				8617C66F1F80F3AE00274CF7 /* whale.json */,
+				8617C66D1F80F0B500274CF7 /* send.json */,
 				86AAF6A11F7CFA8C00CC5DB0 /* likeButton.json */,
-				86AAF6A01F7CFA8C00CC5DB0 /* sendButton.json */,
 				86E68B891F781B880018D81D /* WritingHeyMessButton.json */,
 				86E68B871F7814870018D81D /* ShareInfoButton.json */,
 			);
@@ -251,11 +272,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				86BFCA9D1F75279300C9F50C /* LaunchScreen.storyboard in Resources */,
+				8617C6701F80F3AE00274CF7 /* whale.json in Resources */,
 				86BFCA9A1F75279300C9F50C /* Assets.xcassets in Resources */,
+				8617C66E1F80F0B500274CF7 /* send.json in Resources */,
 				86BFCA951F75279300C9F50C /* Main.storyboard in Resources */,
-				86AAF6A21F7CFA8C00CC5DB0 /* sendButton.json in Resources */,
+				8686B5FD1F821769001609DB /* checkCountText.json in Resources */,
 				86E68B881F7814870018D81D /* ShareInfoButton.json in Resources */,
 				86E68B8A1F781B880018D81D /* WritingHeyMessButton.json in Resources */,
+				8686B5FB1F82102E001609DB /* WAVE.json in Resources */,
 				86AAF6A31F7CFA8C00CC5DB0 /* likeButton.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,15 +347,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86F861DE1F7F9F080009D593 /* FromView.swift in Sources */,
 				86496B1D1F754971000CA673 /* CustomNavigationBar.swift in Sources */,
 				868AC5E81F77A51D0007ADD6 /* ForYouController.swift in Sources */,
+				86F861E01F7F9F490009D593 /* ToView.swift in Sources */,
 				86BFCA921F75279300C9F50C /* FrameController.swift in Sources */,
 				86BFCA901F75279300C9F50C /* AppDelegate.swift in Sources */,
 				86B3172E1F78D31B0051A8B4 /* InfoUserTableViewCell.swift in Sources */,
 				86BFCA981F75279300C9F50C /* HeyYouProject.xcdatamodeld in Sources */,
 				862422091F7A258300365242 /* HeaderViewSectionHeymesses.swift in Sources */,
 				860208461F7AD42500BA45CE /* SettingsTableViewCell_Section0.swift in Sources */,
+				86F861E21F7FA1560009D593 /* HeymessInputView.swift in Sources */,
 				86B317341F78D5580051A8B4 /* InfoUserController.swift in Sources */,
+				86F861DC1F7F9B140009D593 /* WritingHeymessController.swift in Sources */,
 				8624220E1F7A3CBB00365242 /* SettingsController.swift in Sources */,
 				860208481F7AD43F00BA45CE /* SettingsTableViewCell_Section1.swift in Sources */,
 				86C020821F7915CD009C5081 /* LauchController.swift in Sources */,
